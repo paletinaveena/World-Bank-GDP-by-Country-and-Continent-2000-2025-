@@ -1,5 +1,5 @@
 # World Bank GDP by Country & Continent (2000–2025)
-A clean, visual, non-technical analysis of World Bank GDP (current US$) organized by country and summarized to a 7-continent view. All values are expressed in USD (millions) for readability.
+A clean, visual, non-technical analysis of World Bank GDP (current US$) organized by country and summarized to a 7-continent view. All values are expressed in USD (billions) for readability.
 
 ---
 
@@ -14,7 +14,7 @@ To provide a single place to:
 ## What’s included
 
 - **Dataset (wide format)**: gdp_2000_2025.csv
-  Columns: Name of country, Continent, 2000, 2001, …, 2025 (values in USD millions).
+  Columns: Name of country, Continent, 2000, 2001, …, 2025 (values in USD billions).
 - **Notebook:** world-bank-gdp-by-country-continent.ipynb
   Visual, non-technical walkthrough covering leaders, continent shares, long-run deltas, COVID shock & recovery, pre/post-COVID growth, volatility, and global trendlines.
 
@@ -23,7 +23,7 @@ To provide a single place to:
 ## Data source & extraction 
 - **Source APIs:** World Bank Country metadata and GDP indicator NY.GDP.MKTP.CD (current US$), for years 2000–2025.
 - **Process:** Pull countries and GDP values with pagination → clean names/regions → map countries to 7 continents
-  (Oceania grouped under Australia for a business-friendly view) → convert to USD (millions) → export a single wide CSV.
+  (Oceania grouped under Australia for a business-friendly view) → convert to USD (billions) → export a single wide CSV.
 - **Guardrail:** The analysis uses a “latest reliable year” concept (≥70% country coverage) to avoid biased “current” comparisons.
 - **Note:** Antarctica has no countries; it will not appear in the dataset.
 
@@ -45,7 +45,7 @@ To provide a single place to:
 
 ## Assumptions & design choices
 
-- **Units:** Scaled to USD (millions); growth rates are scale-invariant.
+- **Units:** Scaled to USD (billions); growth rates are scale-invariant.
 - **“Latest reliable year” rule:** Year is “current” only if ≥70% of countries report data.
 - **Fair comparisons:** Long-range deltas are capped at ≤2024 to avoid over-crediting countries missing the newest year.
 
@@ -65,7 +65,7 @@ To provide a single place to:
 ---
 
 ## Contributing
-Pull requests welcome. Please keep it dependency-light, preserve the USD (millions) convention, and document any taxonomy or methodology changes in the README.
+Pull requests welcome. Please keep it dependency-light, preserve the USD (billions) convention, and document any taxonomy or methodology changes in the README.
 
 ---
 
